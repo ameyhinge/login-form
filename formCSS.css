@@ -1,0 +1,181 @@
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+	margin:0px;	
+	background-size:cover;
+	font-family: sans-serif;
+    font-size: 0.8rem;
+	overflow:hidden;
+}
+input[type=text],input[type=password]{
+	width:100%;
+	height:2rem;
+	border:none;
+	background-color: transparent;
+	font-size: 0.9rem;
+}
+input[type=text]:focus,input[type=password]:focus{
+	outline:none;
+}
+.desk{
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.05);
+	position:absolute;
+}
+
+/*----------FORM VIEW AND STRUCTURE----------*/
+.form-container{
+	width:100%;
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.form-window{
+	width:24rem;
+	height:28rem;
+	background-color:white;
+	box-shadow:0px 0px 15px rgba(0,0,0,0.5);
+	display:flex;
+	flex-direction:column;
+}
+.form-header{
+	height:35%;
+	width:inherit;
+	background-color:teal;
+	display:flex;
+	flex-direction:column;
+	box-sizing:border-box;
+	padding-left:1rem;
+	padding-right:1rem;
+}
+.form-content{
+	height:65%;
+	width:inherit;
+	box-sizing:border-box;
+	padding-left:1rem;
+	padding-right:1rem;
+	display:flex;
+	flex-direction:column;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+/*----------FORM HEADER CONTENTS----------*/
+.form-title{
+	display: flex;
+	align-items: flex-end;
+	font-size:2rem;
+	color:white;
+	height:80%;
+	box-sizing:border-box;
+	padding-bottom:0.5rem;
+}
+.signin-message{
+	display: flex;
+	align-items: center;
+	color: white;
+	padding-left:0.2rem;
+	margin-bottom:2rem;
+}
+.profile-pic{
+	background-image:url("pro-pic.png");
+	background-size:2rem,2rem;
+	border-radius: 2rem;
+	width: 2rem;
+    height: 2rem;
+	margin-right:1rem;
+}
+.user-details{
+	display: flex;
+	align-items: center;
+	color: white;
+	height:4rem;
+	padding-left:0.2rem;
+	margin-bottom:0.5rem;
+}
+.user-string{
+	color:white;
+}
+/*----------FORM CONTENT CONTENTS----------*/
+.uname-area,.pass-area{
+	margin-bottom: 0.5rem;
+	box-sizing: border-box;
+	position:relative;
+}
+.uname-area{
+	margin-top:1rem;
+}
+.forgot-pass-button{
+	height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	transition: box-shadow, background-color 0.2s, 0.2s;
+}
+
+.forgot-button{
+	color:teal;
+	font-size:0.9rem;
+	cursor:pointer;
+}
+.forgot-button:active{
+	color:rgba(0,128,128,0.6);
+}
+.button-area{
+	margin-top:2rem;
+	display:flex;
+	height:2.5rem;
+	justify-content:flex-start;
+}
+.input-label{
+	position:absolute;
+	z-index:1;
+	padding-top: 2rem;
+	font-size:0.9rem;
+	color:rgb(100,100,100);
+	transition: padding-top,font-size,color 0.15s,0.15s,0.15s ease;
+}
+.input-wrap{
+	width:0%;
+	height:2rem;
+	margin-top:1.6rem;
+	border-bottom:1px solid teal;
+	transition:width 0.3s;
+}
+.input-box{
+	display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+	padding:0.2rem;
+    box-sizing: border-box;
+	border-bottom: 1px solid rgb(100,100,100) !important;
+	position:absolute;
+	z-index:5;
+}
+.signin-button{
+	width:30%;
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	background-color:teal;
+	border-radius:0.2rem;
+	transition: box-shadow, background-color 0.2s, 0.2s;
+}
+.signin-button:hover{
+	cursor:pointer;
+	box-shadow:0px 0px 15px rgba(0,0,0,0.5);
+	background-color:rgba(0,128,128,0.8);
+}
+.signin-button:active{
+	box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+	background-color:teal;
+}
+.error-msg{
+	color:red;
+}
